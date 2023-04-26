@@ -2,6 +2,10 @@
 <!--<input type="text" class="form-control" (input)="onServerUpdate($event)"/>-->
 <input type="text" class="form-control" [(ngModel)]="serverName"/>
 <!--<h3>{{serverName}}</h3>-->
+<label>User Name</label>
+<input type="text" class="form-control" [(ngModel)]="userName" />
+<h3>{{userName}}</h3>
+<button class="btn btn-primary" [disabled]="!userName.length" (click)="onResetUserName()">Reset Username</button>
 <button class="btn btn-primary" [disabled]="!allowedAdd" (click)="onSeverCreation()">Add Server</button>
 <p>{{serverAdditionStatus}}</p>
 <app-server></app-server>

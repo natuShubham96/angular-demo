@@ -9,7 +9,8 @@ import { Component } from '@angular/core';
 export class ServersComponent {
   allowedAdd = false;
   serverAdditionStatus = "No Server was created";
-  serverName = ''
+  serverName = '';
+  userName: ''
 
   constructor() {
     setTimeout(() => {
@@ -23,5 +24,13 @@ export class ServersComponent {
 
   onServerUpdate(event) {
     this.serverName = event.target.value
+  }
+
+  onUserNameUpdate(event) {
+    this.userName = event.target.value
+  }
+
+  onResetUserName() {
+    this.userName = ''
   }
 }
