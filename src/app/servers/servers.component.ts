@@ -10,7 +10,9 @@ export class ServersComponent {
   allowedAdd = false;
   serverAdditionStatus = "No Server was created";
   serverName = '';
-  userName: ''
+  userName='';
+  isServerNameSubmitted= false;
+  servers = ['Server 1', 'Server 2']
 
   constructor() {
     setTimeout(() => {
@@ -19,6 +21,8 @@ export class ServersComponent {
   }
 
   onSeverCreation() {
+    this.isServerNameSubmitted = true;
+    this.servers.push(this.serverName)
     this.serverAdditionStatus = "Server Created! Name->"+this.serverName
   }
 
