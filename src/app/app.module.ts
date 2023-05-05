@@ -10,6 +10,8 @@ import {SuccessAlertComponent} from "./success-alert/success-alert.component";
 import {AlertsComponent} from "./Alerts/alerts.component";
 import {FormsModule} from "@angular/forms";
 import { DisplayDetailsComponent } from './display-details/display-details.component';
+import { CockpitComponent } from './cockpit/cockpit.component';
+import { ServerDetailsComponent } from './server-details/server-details.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +21,9 @@ import { DisplayDetailsComponent } from './display-details/display-details.compo
     WarningAlertComponent,
     SuccessAlertComponent,
     AlertsComponent,
-    DisplayDetailsComponent
+    DisplayDetailsComponent,
+    CockpitComponent,
+    ServerDetailsComponent
   ],
   imports: [
     BrowserModule,

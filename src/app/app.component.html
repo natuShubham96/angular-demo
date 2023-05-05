@@ -2,3 +2,7 @@
 <app-alerts></app-alerts>
 <br>
 <app-display-details></app-display-details>
+<hr>
+<hr>
+<app-cockpit (serverCreated) = "onAddServer($event)" (blueprintCreated) = "onAddServerBlueprint($event)"></app-cockpit>
+<app-server-details *ngFor="let server of servers" [srvElement]="server"></app-server-details>
