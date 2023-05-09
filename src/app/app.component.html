@@ -5,4 +5,13 @@
 <hr>
 <hr>
 <app-cockpit (serverCreated) = "onAddServer($event)" (blueprintCreated) = "onAddServerBlueprint($event)"></app-cockpit>
-<app-server-details *ngFor="let server of servers" [srvElement]="server"></app-server-details>
+<app-server-details *ngFor="let server of servers" [srvElement]="server">
+    <p>{{server.name}}</p>
+    <strong *ngIf="server.type === 'Server'">{{server.content}}</strong>
+    <em *ngIf="server.type === 'Server Blueprint'">{{server.content}}</em>
+</app-server-details>
+<app-game-control (gameStart) = 'onGameStart($event)'></app-game-control>
+<app-even *ngIf="gameCounter%2===0; else odd" [gameCounter] = 'gameCounter'></app-even>
+<ng-template #odd>
+<app-odd [gameCounter] = 'gameCounter'></app-odd>
+</ng-template>

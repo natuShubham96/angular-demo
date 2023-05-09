@@ -7,6 +7,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   servers = [{name:'Test',type: 'Server',content:'Test'}];
+  gameCounter;
 
   onAddServer(serverData : {serverName: string, serverContent: string}) {
     this.servers.push({
@@ -22,6 +23,10 @@ export class AppComponent {
       name: blueprintData.serverName,
       content: blueprintData.serverContent
     })
+  }
+
+  onGameStart(gameData: {gameCounter: number}) {
+    this.gameCounter = gameData.gameCounter;
   }
 
 }

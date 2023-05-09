@@ -12,6 +12,9 @@ import {FormsModule} from "@angular/forms";
 import { DisplayDetailsComponent } from './display-details/display-details.component';
 import { CockpitComponent } from './cockpit/cockpit.component';
 import { ServerDetailsComponent } from './server-details/server-details.component';
+import { GameControlComponent } from './game-control/game-control.component';
+import { OddComponent } from './odd/odd.component';
+import { EvenComponent } from './even/even.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +26,10 @@ import { ServerDetailsComponent } from './server-details/server-details.componen
     AlertsComponent,
     DisplayDetailsComponent,
     CockpitComponent,
-    ServerDetailsComponent
+    ServerDetailsComponent,
+    GameControlComponent,
+    OddComponent,
+    EvenComponent
   ],
   imports: [
     BrowserModule,
