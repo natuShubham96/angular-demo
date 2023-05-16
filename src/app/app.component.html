@@ -14,4 +14,5 @@
 <app-even *ngIf="gameCounter%2===0; else odd" [gameCounter] = 'gameCounter'></app-even>
 <ng-template #odd>
 <app-odd [gameCounter] = 'gameCounter'></app-odd>
+<p appBasicHighlight>Basic highlight works!!</p>
 </ng-template>
