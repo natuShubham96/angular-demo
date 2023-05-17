@@ -13,5 +13,11 @@
 <app-game-control (gameStart) = 'onGameStart($event)'></app-game-control>
 <app-even *appUnless="gameCounter%2!==0" [gameCounter] = 'gameCounter'></app-even>
 <app-odd *appUnless="gameCounter%2===0" [gameCounter] = 'gameCounter'></app-odd>
+<div [ngSwitch]="value">
+    <p *ngSwitchCase="5">Value is 5</p>
+    <p *ngSwitchCase="10">Value is 10</p>
+    <p *ngSwitchCase="15">Value is 15</p>
+    <p *ngSwitchDefault="">Value is default</p>
+</div>
 <p appBasicHighlight>Basic highlight works!!</p>
 <p appBetterHighlight defaultColor="yellow" highlightColor="red">Better highlight works!!</p>
