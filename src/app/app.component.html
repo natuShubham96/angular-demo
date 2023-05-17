@@ -11,9 +11,7 @@
     <em *ngIf="server.type === 'Server Blueprint'">{{server.content}}</em>
 </app-server-details>
 <app-game-control (gameStart) = 'onGameStart($event)'></app-game-control>
-<app-even *ngIf="gameCounter%2===0; else odd" [gameCounter] = 'gameCounter'></app-even>
-<ng-template #odd>
-<app-odd [gameCounter] = 'gameCounter'></app-odd>
+<app-even *appUnless="gameCounter%2!==0" [gameCounter] = 'gameCounter'></app-even>
+<app-odd *appUnless="gameCounter%2===0" [gameCounter] = 'gameCounter'></app-odd>
 <p appBasicHighlight>Basic highlight works!!</p>
 <p appBetterHighlight defaultColor="yellow" highlightColor="red">Better highlight works!!</p>
-</ng-template>
