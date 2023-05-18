@@ -1,9 +1,11 @@
 import { Component } from '@angular/core';
+import { UserService } from './user-services/user-service.service';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  styleUrls: ['./app.component.css'],
+  providers: [UserService]
 })
 export class AppComponent {
   servers = [{name:'Test',type: 'Server',content:'Test'}];

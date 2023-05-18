@@ -18,6 +18,11 @@ import { EvenComponent } from './even/even.component';
 import { BasicHighlight } from './basic-highlight/basicHighlight.directive';
 import { BetterHighlightDirective } from './better-highlight/better-highlight.directive';
 import { UnlessDirective } from './unless.directive';
+import { ActiveUsersComponent } from './active-users/active-users/active-users.component';
+import { InactiveUsersComponent } from './inactive-users/inactive-users/inactive-users.component';
+import { ActiveuserDetailsComponent } from './active-users/activeuser-details/activeuser-details.component';
+import { InactiveDetailsComponent } from './inactive-users/inactive-details/inactive-details.component';
+import { CounterService } from './user-services/counter-service.service';
 
 @NgModule({
   declarations: [
@@ -35,13 +40,17 @@ import { UnlessDirective } from './unless.directive';
     EvenComponent,
     BasicHighlight,
     BetterHighlightDirective,
-    UnlessDirective
+    UnlessDirective,
+    ActiveUsersComponent,
+    InactiveUsersComponent,
+    ActiveuserDetailsComponent,
+    InactiveDetailsComponent
   ],
   imports: [
     BrowserModule,
     FormsModule
   ],
-  providers: [],
+  providers: [CounterService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
